@@ -26,14 +26,6 @@ Need support beyond the scope of this README? Have any questions? Feel free to j
 
 [***mist weather media*** on Discord](https://discord.gg/hV2w5sZQxz)
 
-# Initial Setup (Releases)
-
-![](https://img.shields.io/github/release/MistWeatherMedia/weatherscan-local.svg)
-
-There is no setup required to run the packaged releases. Simply click on the .exe and go! 
-
-However, if you are looking for extra customization beyond the in-app settings menu, you'll want to stick to the source code.
-
 # Initial Setup (Source code)
 
 1. Install [node.js LTS](https://nodejs.org/en/).
