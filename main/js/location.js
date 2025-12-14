@@ -166,11 +166,11 @@ function locationJS() {
             //automatic location pulls based off of the main city config
         }
         
-        //setTimeout(() => {
+        setTimeout(() => {
             if(systemSettings.travel.regionalMap.autoFind == true){
                 initTravelMap();
             }
-        //}, 1000);
+        }, 1000);
     //})
 
 
@@ -464,38 +464,39 @@ function locationJS() {
 
     //data maps will be done later so them georgians can enjoy a localized temp unavailable map
     function centerDataMaps(region) {
-        switch (region) {
-            case "ME", "VT", "NH", "MA", "CT", "RI", "NY", "NJ", "PA", "DE", "MD", "WV", "OH", "IN", "MI", "WI", "MN", "IA", "IL":
+        console.log(region)
+        switch (String(region)) {
+            case "ME" || "VT" || "NH" || "MA" || "CT" || "RI" || "NY" || "NJ" || "PA" || "DE" || "MD" || "WV" || "OH" || "IN" || "MI" || "WI" || "MN" || "IA" || "IL":
                 systemSettings.dataMaps.topPos = 78
                 systemSettings.dataMaps.leftPos = -30
                 systemSettings.dataMaps.zoom = 3.3
                 break;
-            case "NC", "VA", "MO", "KY", "TN":
+            case "NC" || "VA" || "MO" || "KY" || "TN":
                 systemSettings.dataMaps.leftPos = -35.8;
                 systemSettings.dataMaps.topPos = 33.3;
                 systemSettings.dataMaps.zoom = 4;
                 break;
-            case 'GA, "FL', "SC", "AR", "LA", "MS", "AL":
+            case "GA" || "FL" || "SC" || "AR" || "LA" || "MS" || "AL":
                 systemSettings.dataMaps.leftPos = -35.8;
                 systemSettings.dataMaps.topPos = 33.3;
                 systemSettings.dataMaps.zoom = 4;
                 break;
-            case "WA", "ID", "MT", "ND", "SD", "WY", "OR":
+            case "WA" || "ID" || "MT" || "ND" || "SD" || "WY" || "OR":
                 systemSettings.dataMaps.leftPos = 41;
                 systemSettings.dataMaps.topPos = 107;
                 systemSettings.dataMaps.zoom = 4;
                 break;
-            case "CA", "NV", "UT", "CO", "NE", "KS":
+            case "CA" || "NV" || "UT" || "CO" || "NE" || "KS":
                 systemSettings.dataMaps.leftPos = 34;
                 systemSettings.dataMaps.topPos = 67;
                 systemSettings.dataMaps.zoom = 3.7;
                 break;
-            case "TX", "OK":
+            case "TX" || "OK":
                 systemSettings.dataMaps.leftPos = 6;
                 systemSettings.dataMaps.topPos = 26;
                 systemSettings.dataMaps.zoom = 3.7;
                 break;
-            case "AZ", "NM":
+            case "AZ" || "NM":
                 systemSettings.dataMaps.leftPos = 44;
                 systemSettings.dataMaps.topPos = 53;
                 systemSettings.dataMaps.zoom = 4.5;
