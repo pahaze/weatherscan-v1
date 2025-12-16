@@ -2158,7 +2158,7 @@ function getBeachData() {
     } else {
       $.get(`/cwf/${cwfid}`, function(data){
         weatherData.coastalForecast.noReport = false
-        var stringedData = data.productText.replaceAll(".SUN", "X~Sunday").replaceAll(".MON", "X~Monday").replaceAll(".TUE", "X~Tuesday").replaceAll(".WED", "X~Wednesday").replaceAll(".THU", "X~Thursday").replaceAll(".FRI", "X~Friday").replaceAll(".SAT", "X~Saturday").replaceAll(".TODAY", "X~Today").replaceAll(".TONIGHT", "X~Tonight").replaceAll(".THIS AFTERNOON", "X~This Afternoon").replaceAll(".REST OF TODAY...", "X~Rest of Today").split(/\r?\n/)
+        var stringedData = data.productText.replaceAll(".SUN", "X~Sunday").replaceAll(".MON", "X~Monday").replaceAll(".TUE", "X~Tuesday").replaceAll(".WED", "X~Wednesday").replaceAll(".THU", "X~Thursday").replaceAll(".FRI", "X~Friday").replaceAll(".SAT", "X~Saturday").replaceAll(".TODAY", "X~Today").replaceAll(".TONIGHT", "X~Tonight").replaceAll(".THIS AFTERNOON", "X~This Afternoon").replaceAll(".REST OF TODAY...", "X~Rest of Today").replaceAll(".REST OF TONIGHT...", "X~Rest of Tonight").split(/\r?\n/)
         for (var i = 0; i < stringedData.length; i++) {
           //console.log(stringedData[i])
         }

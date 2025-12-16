@@ -30,7 +30,7 @@ var systemSettings = {
     providerType: "provider",
     providerImage: "mistdc",
     adImages: [],
-    version: "1.0"
+    version: "1.12"
   },
   audioSettings: {
     enableMusic: true,

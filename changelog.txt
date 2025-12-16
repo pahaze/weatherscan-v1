@@ -4,3 +4,5 @@ Make sure to report any bugs or issues in the Issues tab!
   -  Other fixes
 = Dec 13, 2025 | VERSION 1.11 =
   -  Fixed data and travel map positioning
+= Dec 15, 2025 | VERSION 1.12 =
+  -  Fixed coastal forecast phrase issue
