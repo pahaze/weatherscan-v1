@@ -15,6 +15,7 @@ var packageLibrary = {
   "ski":skiPackage,
   "beach":beachPackage,
 }
+
 function startupAnimations() {
   //start spinning the logo
   //delay 3 seconds
@@ -35,7 +36,7 @@ if (windowStatus == "nationalForecast") {
     HERE_key = systemSettings.apiKeys.HERE_key
   })
 } else {
-  $.getJSON("configs/yourConfig.json", function(data) {
+  $.getJSON("configs/myConfig-joe.json", function(data) {
     systemSettings = data.jsonSystemSettings
     //console.log("Updated location settings:", systemSettings);
     //console.log(slideSettings.order[0])
@@ -81,18 +82,49 @@ function startSystem() {
     audioPlayer = new AudioManager();
     audioPlayer.initializeAudio()
     audioPlayer.startPlaying(audioPlayer.playlist, true);
-    setTimeout(() => {
-      //r = i1 logo
-      /*Rotate(r, .7, xr=0, yr=0, zr=1)
-      Rotate(r, .8, xr=0, yr=1, zr=0)
-      Rotate(r, .9, xr=1, yr=0, zr=0)*/
-      $('.intellistarlogo').css({
-        transition: `transform ${(systemSettings.appearanceSettings.startupTime/1000)+1}s linear`,
-        transform: `rotateX(-${Math.random()*(systemSettings.appearanceSettings.startupTime/10000)}turn) rotateY(-${Math.random()*(systemSettings.appearanceSettings.startupTime/10000)}turn) rotateZ(-${Math.random()*(systemSettings.appearanceSettings.startupTime/10000)}turn)`
-      });
+    
+    const logo = document.getElementsByClassName("intellistarlogo")[0];
+
+// accumulated rotation (radians)
+let rx = 0;
+let ry = 0;
+let rz = 0;
+
+// radians per 33.33333 ms (exact RS intent)
+const STEP_X = -0.9;
+const STEP_Y = 0.8;
+const STEP_Z = -0.7;
+
+const BASE_DT = 1900;
+const RAD_TO_DEG = 180 / Math.PI;
+
+let lastTime = performance.now();
+
+function animate(now) {
+    const deltaMs = now - lastTime;
+    lastTime = now;
+
+    const scale = deltaMs / BASE_DT;
+
+    rx += STEP_X * scale;
+    ry += STEP_Y * scale;
+    rz += STEP_Z * scale;
+
+    /* Rotate order matches RS:
+       Rotate(Z) → Rotate(Y) → Rotate(X)
+    */
+    logo.style.transform = `
+        rotateZ(${rz * RAD_TO_DEG}deg)
+        rotateY(${ry * RAD_TO_DEG}deg)
+        rotateX(${rx * RAD_TO_DEG}deg)
+    `;
+
+    requestAnimationFrame(animate);
+}
+
+requestAnimationFrame(animate);
       $("#startup .locationname").text(`location name: ${systemSettings.systemLocation}`);
       $("#startup .affiliatename").text(`affiliate name: ${systemSettings.appearanceSettings.providerName}`);
-    }, 5)
     dataJS();
     setTimeout(() => {
       console.log(systemSettings)

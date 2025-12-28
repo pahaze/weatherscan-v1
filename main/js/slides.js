@@ -424,7 +424,7 @@ var slidePrograms = {
         for (var i = 0; i < dataTunnel.alertsAmount; i++) {
           atext = atext + dataTunnel.warnings[i].headline + " " + "\n\n"
         }
-        $(".bulletin .alerts").text(atext)
+        $(".bulletin .alerts").text(atext.slice(0, -2))
         $(".bulletin .group").fadeIn(500)
         
         setTimeout(() => {

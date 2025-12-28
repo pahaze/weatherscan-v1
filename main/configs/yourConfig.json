@@ -16,7 +16,7 @@
             "providerType":"provider",
             "providerImage":"mistdc",
             "adImages":[],
-            "version":"1.12"
+            "version":"1.13"
         },
         "audioSettings":{
             "enableMusic":true,
@@ -322,7 +322,7 @@
         },
         "ski": {
           "resorts": [
-            { "displayName": "Snowshow Mountain", "state": "WV", "resortId": "304001" },
+            { "displayName": "Snowshoe Mountain", "state": "WV", "resortId": "304001" },
             { "displayName": "Baker Mountain", "state": "ME", "resortId": "207024" },
             { "displayName": "Bolton Valley Resort", "state": "VT", "resortId": "802002" },
             { "displayName": "Berkshire East Ski Resort", "state": "MA", "resortId": "413001" },

@@ -6,3 +6,7 @@ Make sure to report any bugs or issues in the Issues tab!
   -  Fixed data and travel map positioning
 = Dec 15, 2025 | VERSION 1.12 =
   -  Fixed coastal forecast phrase issue
+= Dec 28, 2025 | VERSION 1.13 =
+  -  Added national config, accessible by adding /?nationalForecast to the URL
+  -  Fixed bulletin line break bug
+  -  Fixed ski resort spelling error

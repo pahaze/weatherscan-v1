@@ -30,7 +30,7 @@ var systemSettings = {
     providerType: "provider",
     providerImage: "mistdc",
     adImages: [],
-    version: "1.12"
+    version: "1.13"
   },
   audioSettings: {
     enableMusic: true,
@@ -51,6 +51,7 @@ var systemSettings = {
       cities:[]
     },
     radar: {
+      enabled:true,
       lat: "",
       lon: "",
       auto: true,
