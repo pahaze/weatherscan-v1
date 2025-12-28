@@ -6,7 +6,7 @@
 
 Online demo: [v1.weatherscan.net](https://v1.weatherscan.net)
 
-## NATIONAL FORECAST MOE
+## NATIONAL FORECAST MODE
 Add " /?nationalForecast " at the end of the URL of the simulator's tab to access a rotating forecast for cities across the United States
 
 © Mist Weather Media 2025.
