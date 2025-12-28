@@ -467,7 +467,6 @@
                         {"type":"interstateSign","text":"91", "topPos":"275","leftPos":"785"},
                         {"type":"interstateSign","text":"495", "topPos":"399","leftPos":"1179"},
                         {"type":"interstateSign","text":"95", "topPos":"721","leftPos":"579"},
-                        {"type":"usHwySign","text":"44", "topPos":"721","leftPos":"579"},
                         {"type":"usHwySign","text":"9", "topPos":"424","leftPos":"398"},
                         {"type":"interstateSign","text":"87", "topPos":"584","leftPos":"329"}
                       ]
