@@ -16,7 +16,7 @@
             "providerType":"provider",
             "providerImage":"mistdc",
             "adImages":[],
-            "version":"1.13"
+            "version":"1.14"
         },
         "audioSettings":{
             "enableMusic":true,
