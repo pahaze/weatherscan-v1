@@ -467,6 +467,7 @@
                         {"type":"interstateSign","text":"91", "topPos":"275","leftPos":"785"},
                         {"type":"interstateSign","text":"495", "topPos":"399","leftPos":"1179"},
                         {"type":"interstateSign","text":"95", "topPos":"721","leftPos":"579"},
+                        {"type":"usHwySign","text":"44", "topPos":"721","leftPos":"579"},
                         {"type":"usHwySign","text":"9", "topPos":"424","leftPos":"398"},
                         {"type":"interstateSign","text":"87", "topPos":"584","leftPos":"329"}
                       ]
@@ -1023,10 +1024,10 @@
                         {"locationName": "Brawley", "dotTopPos": "648", "dotLeftPos": "1299", "nameTopMargin":"-11", "nameLeftMargin":"-193"}
                       ],
                       "radarIcons":[
-                        {"type":"interstateSign","text":"10", "topPos":"313","leftPos":"844"},
-                        {"type":"interstateSign","text":"8", "topPos":"733","leftPos":"862"},
-                        {"type":"interstateSign","text":"15", "topPos":"733","leftPos":"862"},
-                        {"type":"interstateSign","text":"5", "topPos":"733","leftPos":"862"}
+                        {"type":"interstateSign","text":"10", "topPos":"424","leftPos":"1173"},
+                        {"type":"interstateSign","text":"8", "topPos":"702","leftPos":"1308"},
+                        {"type":"interstateSign","text":"15", "topPos":"502","leftPos":"777"},
+                        {"type":"interstateSign","text":"5", "topPos":"533","leftPos":"669"}
                       ]
                     }
                 },

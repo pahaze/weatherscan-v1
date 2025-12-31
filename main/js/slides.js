@@ -636,7 +636,7 @@ var slidePrograms = {
     dopplerRadar() {
       $("#slides-background").fadeOut(0)
       radarSlide = true
-      var dataTunnel = locationChoice == "main" ? systemSettings.mainCity.radar : systemSettings.extraCity.cities[locationid].radar
+      var dataTunnel = locationChoice == "main" || locationChoice == "spanish" ? systemSettings.mainCity.radar : systemSettings.extraCity.cities[locationid].radar
       if (locationChoice == "spanish") {
         $('.titletext').text("Radar Doppler Local")
         $(".doppler-radar .timestamp").text("Últimas 3 horas")
@@ -761,7 +761,7 @@ var slidePrograms = {
     radarSatellite() {
       $("#slides-background").fadeOut(0)
       weatherData.satUnavailable = false
-      var dataTunnel = locationChoice == "main" ? systemSettings.mainCity.radar : systemSettings.extraCity.cities[locationid].radar
+      var dataTunnel = locationChoice == "main" || locationChoice == "spanish" ? systemSettings.mainCity.radar : systemSettings.extraCity.cities[locationid].radar
       if (locationChoice == "spanish") {
         $('.titletext').text("Radar/Satéllite")
         $(".doppler-radar .timestamp").text("Últimas 5 horas")

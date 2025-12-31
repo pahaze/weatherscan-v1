@@ -213,7 +213,7 @@ function initTravelForecast() {
 }
 function createRadarCities(type) {
   var header
-  if (type == "main") {header = systemSettings.mainCity.radar} else if (type == "extra") {header = systemSettings.extraCity.cities[locationid].radar}
+  if (type == "main" || type == "spanish") {header = systemSettings.mainCity.radar} else if (type == "extra") {header = systemSettings.extraCity.cities[locationid].radar}
   var drClass = document.getElementsByClassName("doppler-radar")[0]
   for (var i = 0; i < header.radarCities.length; i++) {
     var child = document.createElement("div")
@@ -255,7 +255,7 @@ function createRadarCities(type) {
 }
 function createRadarIcons(type) {
   var header
-  if (type == "main") {header = systemSettings.mainCity.radar} else if (type == "extra") {header = systemSettings.extraCity.cities[locationid].radar}
+  if (type == "main" || type == "spanish") {header = systemSettings.mainCity.radar} else if (type == "extra") {header = systemSettings.extraCity.cities[locationid].radar}
   drClass = document.getElementsByClassName("doppler-radar")[0]
   for (var i = 0; i < header.radarIcons.length; i++) {
     var child = document.createElement("div")

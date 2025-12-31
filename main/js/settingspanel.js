@@ -35,8 +35,18 @@ if (windowStatus == "nationalForecast") {
     traf_key = systemSettings.apiKeys.traf_key
     HERE_key = systemSettings.apiKeys.HERE_key
   })
-} else {
+} else if (windowStatus == "debugJoeMist") {
   $.getJSON("configs/myConfig-joe.json", function(data) {
+    systemSettings = data.jsonSystemSettings
+    //console.log("Updated location settings:", systemSettings);
+    //console.log(slideSettings.order[0])
+    api_key = systemSettings.apiKeys.api_key
+    map_key = systemSettings.apiKeys.map_key
+    traf_key = systemSettings.apiKeys.traf_key
+    HERE_key = systemSettings.apiKeys.HERE_key
+  })
+} else {
+  $.getJSON("configs/yourConfig.json", function(data) {
     systemSettings = data.jsonSystemSettings
     //console.log("Updated location settings:", systemSettings);
     //console.log(slideSettings.order[0])

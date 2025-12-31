@@ -559,10 +559,10 @@ function getCoreData() {
     var url = "https://api.weather.com/v3/wx/forecast/daily/5day?geocode=" + systemSettings.mainCity.lat + "," + systemSettings.mainCity.lon + "&format=json&units=e&language=en-US&apiKey=" + api_key
     $.getJSON(url, function(data) {
       var ii = 0
-      var ni = 0
+      var ni = 1
       if (data.daypart[0].daypartName[0] == null) {
           ii = 1
-          ni = 1
+         // ni = 1
         }
         weatherData.localForecast.locationName = systemSettings.mainCity.locationName
         weatherData.localForecast.noReport = false

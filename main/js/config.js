@@ -11,8 +11,8 @@ function randomTrafKey() {
     'cJG5MpqFVuqA6VfHYFcDxz2NoQOmmBVG'];
   traf_key = tkeys[finalcodeval]
 }
-//randomTrafKey();
-//var systemSettings
+randomTrafKey();
+
 var systemSettings = {
   apiKeys: {
     api_key: "e1f10a1e78da46f5b10a1e78da96f525",
@@ -30,7 +30,7 @@ var systemSettings = {
     providerType: "provider",
     providerImage: "mistdc",
     adImages: [],
-    version: "1.13"
+    version: "1.14"
   },
   audioSettings: {
     enableMusic: true,
