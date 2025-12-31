@@ -14,3 +14,7 @@ Make sure to report any bugs or issues in the Issues tab!
   -  Fixed config loading error
   -  Fixed day name error on local forecast
   -  Fixed spanish forecast crashing at radar
+  = Dec 31, 2025 | VERSION 1.14.1 =
+  -  Fixed spanish forecast narrations
+  -  Fixed spanish forecast conditions
+  -  Fixed text alignment in daypart

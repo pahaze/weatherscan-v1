@@ -1750,6 +1750,7 @@ its not 1 for 1 code using so i mean i guess its aight
 }
 .daypart-forecast .time {
     position: absolute;
+    display: table;
     font-family: Frutiger;
     font-weight: bold;
     font-size: 46px;

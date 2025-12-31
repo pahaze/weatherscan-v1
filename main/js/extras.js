@@ -1250,6 +1250,8 @@ function getCond(iconCode, type, language) {
 			return codeToCurrentES[iconCode].textModifier.replaceAll(",","/")
 		} else if (type == "forecast") {
 			return codeToFcstES[iconCode].textModifier.replaceAll(",","/")
+		} else if (type == "daypart") {
+			return codeToDayPartES[iconCode].textModifier.replaceAll(",","/")
 		}
 	}
 }

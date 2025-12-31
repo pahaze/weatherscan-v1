@@ -563,8 +563,9 @@ var slidePrograms = {
         getIcon($(".current-conditions .icon"), dataTunnel.icon, "current", "large")
         $(".current-conditions .condition").text(dataTunnel.condition)
         $(".current-conditions .temperature").text(dataTunnel.temperature)
-
-        audioPlayer.playCC()
+        if (locationChoice != "spanish") {
+          audioPlayer.playCC()
+        }
         fadeSlideIn($(".current-conditions"), 500)
         setTimeout(() => {
           fadeSlideOut($(".current-conditions"), 500, true)
@@ -707,7 +708,9 @@ var slidePrograms = {
         }
         
       }, 50);
-      audioPlayer.playDopplerRadar()
+      if (locationChoice != "spanish") {
+        audioPlayer.playDopplerRadar()
+      }
       fadeSlideIn($(".doppler-radar"), 0, 0)
       createRadarCities(locationChoice)
       createRadarIcons(locationChoice)
@@ -882,7 +885,9 @@ var slidePrograms = {
       $('.titletext').text(dataTunnel.header)
       $('.headertext').text(dataTunnel.locationName)
       var divs = [".one", ".two", ".three", ".four"]
-      audioPlayer.playDP()
+      if (locationChoice != "spanish") {
+        audioPlayer.playDP()
+      }
       if (dataTunnel.noReport == false) {
         fadeSlideIn($(".daypart-forecast"), 500)
         for (var i = 0; i < 4; i++) {
