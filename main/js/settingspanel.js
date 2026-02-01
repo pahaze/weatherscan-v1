@@ -58,7 +58,7 @@ if (windowStatus == "nationalForecast") {
 }
 
   
-function startSystem() {
+async function startSystem() {
   console.log(systemSettings)
   //api_key = systemSettings.apiKeys.api_key
   //map_key = systemSettings.apiKeys.map_key
@@ -89,10 +89,6 @@ function startSystem() {
     //locationJS()
     $('#main').fadeIn(0);
     $("#startup").fadeIn(0);
-    audioPlayer = new AudioManager();
-    audioPlayer.initializeAudio()
-    audioPlayer.startPlaying(audioPlayer.playlist, true);
-    
     const logo = document.getElementsByClassName("intellistarlogo")[0];
 
 // accumulated rotation (radians)
@@ -143,6 +139,9 @@ requestAnimationFrame(animate);
       startupAnimations()
     }, 3000);
   }, 1000);
+  audioPlayer = new AudioManager();
+  await audioPlayer.initializeAudio()
+  audioPlayer.startPlaying(audioPlayer.playlist, true);
 }
 setTimeout(() => {
   startSystem()

@@ -4,21 +4,20 @@ class AudioManager {
         this.$players = $('<div id="players">')
         this.isMobile = false
 
-        $('body').append(this.$players)
+        $('body').append(this.$players) 
+    }
 
-        this.initializeAudio = function () {
-            //setTimeout(() => {
-                if (systemSettings.audioSettings.enableMusic) {
-                    this.buildPlaylist();
-                    if (systemSettings.audioSettings.randomStart) {
-                        this.shuffleStart()
-                    }
-                    if (systemSettings.audioSettings.shuffle) {
-                        shuffle(this.playlist)
-                    }
-                }
-            //}, 1000);
+    async initializeAudio() {
+        if (systemSettings.audioSettings.enableMusic) {
+            await this.buildPlaylist();
+            if (systemSettings.audioSettings.randomStart) {
+                this.shuffleStart()
+            }
+            if (systemSettings.audioSettings.shuffle) {
+                shuffle(this.playlist)
+            }
         }
+
     }
 
     shuffleStart() {
@@ -80,12 +79,24 @@ class AudioManager {
                 //731
             //}, i*731);
         //}
-    buildPlaylist() {
-        var musicPath = 'music/';
-        systemSettings.audioSettings.order.forEach(order => {
-            this.playlist.push(`${musicPath}Track ${order}.mp3`)
+    async getMusicArray() {
+        try {
+            const response = await fetch('http://'+document.location.hostname+':8081/http://'+document.location.hostname+':8082/readfiles');
+            if(!response.ok) {
+                throw new Error("The music request failed. Why do we still use JavaScript? ${response.status}");
+            }
+
+            const returnedData = await response.json();
+            return returnedData;
+        } catch(error) {
+            console.error("", error);
+            return [];
         }
-        );
+    }
+
+    async buildPlaylist() {
+        this.playlist = await this.getMusicArray();
+        console.log(this.playlist);
     }
 
     startPlaying(arr, loop) {
